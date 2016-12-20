@@ -1,0 +1,521 @@
+textarea, input, button
+  outline: none
+
+body
+  position: relative
+  overflow: hidden
+
+.input-container
+  position: relative
+  width: 85%
+  margin: 20px auto
+
+.color-input-container
+  display: flex
+  justify-content: space-between
+
+.color-input-log
+  font-size: 14px
+  font-weight: bold
+  color: $dark-gray
+  margin-top: 3px
+
+input, label
+  display: block
+  font-size: 14px
+  font-weight: bold
+
+label
+  color: $black
+
+input
+  width: 100%
+  box-sizing: border-box
+  padding: 10px
+  margin-top: 10px
+  //border: 2px solid $gray
+
+input[type=range]
+  margin: 0px
+
+input[type=color]
+  //display: none
+  height: 40px
+  //padding: 0px 10px 10px 0px
+  //box-shadow: inset 0px 0px 0px 10px white
+
+input .sp-input
+  font-size: 14px
+  border: none
+  padding: 0px
+  margin: 0px
+  width: 100%
+  background: auto
+  border-radius: 0px
+  color: $black
+
+input[list]
+  transition: 300ms
+  //background: blue
+  &:focus
+    border: 2px solid $black
+
+select
+  outline: none
+  -webkit-appearance: none
+  appearance: none
+  width: 100%
+  border-radius: 0px
+  border: 2px solid $gray
+  padding: 10px
+  margin-top: 10px
+  position: relative
+  transition: 300ms
+  &:focus
+    border: 2px solid $dark-gray
+  &::before
+    content: '▼'
+    font-size: 24px
+    height: 200px
+    width: 200px
+    background: blue
+    display: inline
+    color: $black
+    position: absolute
+    top: 0
+    right: 10px
+
+input[type=range]
+  -webkit-appearance: none
+  width: 100%
+  background: transparent
+
+input[type=range]::-webkit-slider-thumb
+  -webkit-appearance: none
+
+input[type=range]:focus
+  outline: none
+
+input[type=range]::-ms-track
+  width: 100%
+  cursor: pointer
+  background: transparent
+  border-color: transparent
+  color: transparent
+
+input[type=range]::-webkit-slider-thumb
+  -webkit-appearance: none
+  border: 2px solid $dark-gray
+  height: 18px
+  width: 18px
+  border-radius: 50%
+  background: $gray
+  cursor: pointer
+  margin-top: -7.5px
+
+input[type=range]::-webkit-slider-runnable-track
+  width: 100%
+  height: 3px
+  cursor: pointer
+  background: $gray
+
+input[type=range]:focus::-webkit-slider-runnable-track
+  background: $dark-gray
+
+input[type=radio]
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  margin: 0
+  cursor: pointer
+
+.font-advice-container
+  display: none
+  position: relative
+  box-sizing: border-box
+  height: 0px
+  width: 85%
+  margin: 0px auto 0px
+  background: white
+  overflow: hidden
+  transition: 300ms ease-in-out
+  &.advice-open
+    display: block
+    margin: -22px auto 0px
+    height: 300px
+    border: 2px solid $dark-gray
+    border-top-color: $gray
+
+.advice-content
+  overflow: scroll
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: white
+
+.text-align-container
+  width: 100%
+  height: 40px
+  box-sizing: border-box
+  margin-top: 10px
+  //border: 2px solid blue
+  box-sizing: border-box
+  display: flex
+  justify-content: space-between
+
+.align-icon
+  background: white
+  position: relative
+  display: inline-block
+  height: 100%
+  width: 70px
+  margin: 0px
+  padding: 0px
+  border: 2px solid $gray
+  transition: 300ms
+  &:hover
+    border-color: $dark-gray
+
+.span-container
+  box-sizing: border-box
+  margin: 8px auto
+  height: 100%
+  width: 50%
+  //border: 2px solid red
+  span
+    display: block
+    margin: 5px 0px
+    width: 100%
+    height: 2px
+    background: $dark-gray
+  span:nth-child(2)
+    width: 80%
+  span:last-child
+    width: 75%
+
+.icon-center
+  span
+    margin: 5px auto
+
+.icon-right
+  span
+    margin: 5px 0px 5px auto
+
+
+.body-container
+  height: 100vh
+  width: 100vw
+  display: flex
+  flex-shrink: 0
+  position: relative
+  overflow: hidden
+  justify-content: space-between
+
+.input-range-container
+  font-size: 14px
+  color: $black
+  margin-top: 0px
+  display: flex
+  height: 40px
+  .input-value
+    font-weight: bold
+    display: inline-block
+    width: 60px
+    line-height: 40px
+    margin-right: 10px
+    color: $dark-gray
+    //padding: 5px
+    span:last-child
+      margin-left: -3px
+
+section
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100vh
+  left: 0
+
+.text-container
+  -webkit-font-smoothing: antialiased
+  max-width: 900px
+  margin-top: -60px
+  padding: 20px
+
+.heading
+  font-family: 'Lato'
+  font-weight: bold
+  font-size: 64px
+  outline: none
+  margin-bottom: 30px
+  //border: 1px solid teal
+
+.body
+  font-family: 'Open Sans'
+  font-weight: normal
+  font-size: 18px
+  line-height: auto
+  outline: none
+  max-width: 900px
+  max-height: 80vh
+  //border: 1px solid salmon
+
+aside
+  flex-shrink: 0
+  display: block
+  height: 100vh
+  width: 270px
+  background: $bg-gray
+  position: relative
+  right: 0
+  color: $black
+
+button, .btn
+  font-size: 14px
+  letter-spacing: .1em
+  text-transform: uppercase
+  text-align: center
+  background: $gray
+  color: $dark-gray
+  border: none
+
+.tab
+  display: flex
+  width: 100%
+  height: 45px
+  line-height: 45px
+  background: $gray
+  color: white
+  cursor: pointer
+
+.tab-section
+  width: 50%
+
+.selected
+  background: $bg-gray
+  cursor: default
+
+.form-section
+  height: 85vh
+  padding-bottom: 60px
+  overflow: scroll
+  display: none
+
+.active
+  display: block
+
+.submit-btn
+  //box-shadow: 5px -10px 10px rgba($bg-gray, .9)
+  height: 60px
+  width: 100%
+  line-height: 60px
+  position: absolute
+  bottom: 0
+  z-index: 10
+  cursor: pointer
+  transition: 200ms
+  &:hover
+    background: $black
+    color: $gray
+  &:active
+    border: none
+
+.close-btn
+  height: 60px
+  width: 100%
+  border: none
+  position: absolute
+  bottom: 0
+  right: 0
+  cursor: pointer
+  background: $bg-gray
+  transition: 200ms
+  text-transform: uppercase
+  &:hover
+    background: $gray
+
+.modal
+  //display: none
+  position: absolute
+  height: 100vh
+  width: 270px
+  right: 0
+  top: 100vw
+  z-index: 10
+  background: $bg-modal
+  color: white
+  transition: 500ms ease-in-out
+  &.open
+    top: 0
+
+.copy-btn
+  position: absolute
+  top: 0
+  right: 0
+  border: none
+  background: #eee
+  font-size: 14px
+  text-transform: uppercase
+  padding: 10px
+  height: 36px
+  //line-height: 30px
+  z-index: 3
+  transition: 200ms
+  cursor: pointer
+  &:hover
+    background: $dark-gray
+    color: $gray
+
+.alert-copied
+  background: rgba($bg-gray, .8)
+  color: $black
+  position: absolute
+  height: 36px
+  width: 100%
+  line-height: 36px
+  margin-left: 320px
+  top: 0
+  padding-left: 10px
+  z-index: 2
+  transition: 300ms ease-in-out
+  &.alert-open
+    margin-left: 0px
+
+figure
+  margin: -10px 20px 10px
+
+code
+  font-family: 'Inconsolata', monospace
+  font-size: 16px
+
+.el
+  color: #e4be58
+
+.sl
+  color: #54bccd
+
+.right-container
+  display: flex
+  &:last-child
+    margin-right: 270px
+
+.reset-btn
+  //height: 40px
+  width: 200px
+  border: none
+  //position: absolute
+  bottom: 60px
+  right: 0
+  cursor: pointer
+  transition: 200ms
+  text-transform: uppercase
+  background: white
+  border-right: 2px solid $bg-gray
+  border-left: 2px solid $bg-gray
+  &:hover
+    background: $gray
+
+.font-pairing-container
+  border-left: 2px solid $bg-gray
+  height: 100%
+  width: 500px
+  display: block
+  text-align: center
+
+.font-pairing-output
+  margin-top: 0px
+  line-height: 0px
+  opacity: 0
+  transition: 300ms
+  &.show-pairing
+    opacity: 1
+    line-height: 58px
+
+.logo-container
+  width: 200px
+  height: 58px
+  border-right: 2px solid $bg-gray
+  display: flex
+  justify-content: center
+  align-items: center
+
+.version
+  width: 30px
+  height: 100%
+
+footer
+  display: flex
+  justify-content: space-between
+  height: 58px
+  width: 100%
+  border-top: 2px solid #eee
+  background: white
+  position: absolute
+  //z-index: 100
+  bottom: 0
+  p
+    margin-left: 30px
+    height: 58px
+    display: inline
+    line-height: 58px
+    color: $dark-gray
+  a
+    color: lightblue
+    text-decoration: none
+
+.intro-container
+  position: absolute
+  z-index: 100
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(#069,.92)
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  transition: 400ms ease
+  &.close
+    transform: scale(2)
+    opacity: 0
+    pointer-events: none
+  img
+    height: 100px
+    margin: 0px auto
+    display: block
+    opacity: 0
+    transition: 600ms
+    transform: scale(1.4)
+    &.logo-animate
+      opacity: 1
+      transform: scale(1)
+  p
+    margin-top: 30px
+    font-family: 'Roboto'
+    color: white
+    font-size: 18px
+    max-width: 500px
+    transition: 800ms
+    opacity: 0
+    &.p-animate
+      opacity: 1
+  button
+    height: 60px
+    width: 270px
+    margin: 30px auto 0px
+    display: inline
+    background: white
+    color: $dark-gray
+    opacity: 0
+    transition: 300ms
+    &.btn-animate
+      opacity: .8
+    &:hover
+      opacity: 1

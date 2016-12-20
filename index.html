@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Type Tool</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+
+    <div class="body-container">
+
+      <div class="intro-container">
+        <div class="intro-first">
+          <img class="main-logo" src="images/logo.png" alt="type tool">
+          <p class="start-p">A simple tool for editing typography in the browser. Copy the code and paste it into your own project. </p>
+          <button type="button" class="start-btn">Get Started</button>
+        </div>
+      </div>
+
+      <section>
+        <div class="text-container">
+          <div contenteditable="true" class="heading">
+            The quick brown fox jumped over the lazy green dog
+          </div>
+          <div contenteditable="true" class="body">
+            Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="tab">
+          <div id="body-tab" class="tab-section btn selected">Body</div>
+          <div id="heading-tab" class="tab-section btn">Heading</div>
+        </div>
+
+        <div class="form-section body-form active">
+          <form action="">
+            <div class="input-container">
+              <label for="body-font-family">Font Family</label>
+              <select class="body-font" name="">
+                <option value="Abril Fatface">Abril Fatface</option>
+                <option value="Anton">Anton</option>
+                <option value="Bungee">Bungee</option>
+                <option value="Bungee Shade">Bungee Shade</option>
+                <option value="Cormorant Garamond">Cormorant Garamond</option>
+                <option value="Eczar">Eczar</option>
+                <option value="Gentium Basic">Gentium Basic</option>
+                <option value="Gravitas One">Gravitas One</option>
+                <option value="Lato">Lato</option>
+                <option value="Libre Baskerville">Libre Baskerville</option>
+                <option value="Libre Franklin">Libre Franklin</option>
+                <option value="Merriweather">Merriweather</option>
+                <option value="Monoton">Monoton</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Nunito Sans">Nunito Sans</option>
+                <option selected="selected" value="Open Sans">Open Sans</option>
+                <option value="Oswald">Oswald</option>
+                <option value="Playfair Display">Playfair Display</option>
+                <option value="PT Sans">PT Sans</option>
+                <option value="PT Serif">PT Serif</option>
+                <option value="Proza Libre">Proza Libre</option>
+                <option value="Quicksand">Quicksand</option>
+                <option value="Raleway">Raleway</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Roboto Slab">Roboto Slab</option>
+                <option value="Rubik">Rubik</option>
+                <option value="Taviraj">Taviraj</option>
+                <option value="Trirong">Trirong</option>
+                <option value="Ultra">Ultra</option>
+                <option value="Work Sans">Work Sans</option>
+              </select>
+            </div>
+
+<!--
+            <div class="font-advice-container">
+              <div class="advice-content">
+                <button class="close-advice">close</button>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+-->
+            <div class="input-container">
+              <label for="body-font-family">Font Weight</label>
+              <select class="body-weight" name="">
+                <option value="400">Normal</option>
+                <option value="300">Lighter</option>
+                <option value="700">Bold</option>
+              </select>
+            </div>
+
+            <div class="input-container">
+              <label for="body-font-size">Font Size</label>
+              <div class="input-range-container">
+                <div class="input-value">
+                  <span class="body-font-size-output">18</span>
+                  <span>px</span>
+                </div>
+                <input type="range" name="body-font-size" value="18" min="8" max="64">
+              </div>
+            </div>
+
+            <div class="input-container">
+              <label for="body-line-height">Leading</label>
+              <div class="input-range-container">
+                <div class="input-value">
+                  <span class="body-line-height-output">22</span>
+                  <span>px</span>
+                </div>
+                <input type="range" name="body-line-height" value="22" min="8" max="112">
+              </div>
+            </div>
+
+            <div class="input-container">
+              <label for="body-margin">Top Margin</label>
+              <div class="input-range-container">
+                <div class="input-value">
+                  <span class="body-margin-output">0</span>
+                  <span>px</span>
+                </div>
+                <input type="range" name="body-margin" value="0" min="0" max="200">
+              </div>
+            </div>
+
+            <div class="input-container">
+             <label for="body-max-width">Width</label>
+             <div class="input-range-container">
+               <div class="input-value">
+                 <span class="body-max-width-output">900</span>
+                 <span>px</span>
+               </div>
+               <input type="range" name="body-max-width" value="900" min="425" max="900">
+             </div>
+           </div>
+
+           <div class="input-container">
+             <label>Body Color</label>
+             <div class="color-input-container">
+                <div class="color-input-log">
+                  <div class="body-hex-color">Hex code</div>
+                  <div class="body-rgba-color">RGB</div>
+                </div>
+                <input id="body-color" name="body-color" class="display-none">
+             </div>
+           </div>
+
+           <div class="input-container">
+             <label>Background Color</label>
+             <div class="color-input-container">
+                <div class="color-input-log">
+                  <div class="bg-hex-color">Hex code</div>
+                  <div class="bg-rgba-color">RGB</div>
+                </div>
+                <input id="bg-color" name="bg-color" class="display-none">
+             </div>
+           </div>
+
+          <div class="input-container">
+            <label for="body-text-align">Text Align</label>
+            <div class="text-align-container">
+              <div class="align-icon">
+                <div class="span-container">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <input type="radio" name="body-text-align" value="left">
+              </div>
+              <div class="align-icon icon-center">
+                <div class="span-container">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <input type="radio" name="body-text-align" value="center">
+              </div>
+              <div class="align-icon icon-right">
+                <div class="span-container">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <input type="radio" name="body-text-align" value="right">
+              </div>
+            </div>
+          </div>
+
+          </form>
+        </div>
+
+        <div class="form-section heading-form">
+          <form action="">
+
+            <div class="input-container">
+              <label for="heading-font-family">Font Family</label>
+              <select class="heading-font" name="">
+                <option value="Abril Fatface">Abril Fatface</option>
+                <option value="Anton">Anton</option>
+                <option value="Bungee">Bungee</option>
+                <option value="Bungee Shade">Bungee Shade</option>
+                <option value="Cormorant Garamond">Cormorant Garamond</option>
+                <option value="Eczar">Eczar</option>
+                <option value="Gentium Basic">Gentium Basic</option>
+                <option value="Gravitas One">Gravitas One</option>
+                <option selected="selected" value="Lato">Lato</option>
+                <option value="Libre Baskerville">Libre Baskerville</option>
+                <option value="Libre Franklin">Libre Franklin</option>
+                <option value="Merriweather">Merriweather</option>
+                <option value="Monoton">Monoton</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Nunito Sans">Nunito Sans</option>
+                <option value="Oswald">Oswald</option>
+                <option value="Playfair Display">Playfair Display</option>
+                <option value="PT Sans">PT Sans</option>
+                <option value="PT Serif">PT Serif</option>
+                <option value="Proza Libre">Proza Libre</option>
+                <option value="Quicksand">Quicksand</option>
+                <option value="Raleway">Raleway</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Roboto Slab">Roboto Slab</option>
+                <option value="Rubik">Rubik</option>
+                <option value="Taviraj">Taviraj</option>
+                <option value="Trirong">Trirong</option>
+                <option value="Ultra">Ultra</option>
+                <option value="Work Sans">Work Sans</option>
+              </select>
+            </div>
+
+            <div class="input-container">
+              <label for="heading-font-family">Font Weight</label>
+              <select class="heading-weight" name="">
+                <option value="400">Normal</option>
+                <option value="300">Lighter</option>
+                <option value="700">Bold</option>
+              </select>
+            </div>
+
+            <div class="input-container">
+              <label for="heading-font-size">Font Size</label>
+              <div class="input-range-container">
+                <div class="input-value">
+                  <span class="heading-font-size-output">64</span>
+                  <span>px</span>
+                </div>
+                <input type="range" name="heading-font-size" value="64" min="8" max="164">
+              </div>
+            </div>
+
+            <div class="input-container">
+              <label for="heading-line-height">Leading</label>
+              <div class="input-range-container">
+                <div class="input-value">
+                  <span class="heading-line-height-output">0</span>
+                  <span>px</span>
+                </div>
+                <input type="range" name="heading-line-height" value="" min="8" max="164">
+              </div>
+            </div>
+
+            <div class="input-container">
+              <label for="heading-margin">Bottom Margin</label>
+              <div class="input-range-container">
+                <div class="input-value">
+                  <span class="heading-margin-output">30</span>
+                  <span>px</span>
+                </div>
+                <input type="range" name="heading-margin" value="30" min="0" max="200">
+              </div>
+            </div>
+
+            <div class="input-container">
+             <label for="heading-max-width">Width</label>
+             <div class="input-range-container">
+               <div class="input-value">
+                 <span class="heading-max-width-output">900</span>
+                 <span>px</span>
+               </div>
+               <input type="range" name="heading-max-width" value="900" min="425" max="900">
+             </div>
+           </div>
+
+            <div class="input-container">
+              <label for="heading-kerning">Kerning</label>
+              <div class="input-range-container">
+                <div class="input-value">
+                  <span class="heading-kerning-output">0</span>
+                  <span>px</span>
+                </div>
+                <input type="range" name="heading-kerning" value="0" min="0" max="100">
+              </div>
+            </div>
+
+            <div class="input-container">
+              <label>Heading Color</label>
+              <div class="color-input-container">
+                 <div class="color-input-log">
+                   <div class="header-hex-color">hex</div>
+                   <div class="header-rgba-color">rgb</div>
+                 </div>
+                 <input id="header-color" name="bg-color" class="display-none">
+              </div>
+            </div>
+
+            <div class="input-container">
+              <label for="heading-text-align">Text Align</label>
+              <div class="text-align-container">
+                <div class="align-icon">
+                  <div class="span-container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <input type="radio" name="heading-text-align" value="left">
+                </div>
+                <div class="align-icon icon-center">
+                  <div class="span-container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <input type="radio" name="heading-text-align" value="center">
+                </div>
+                <div class="align-icon icon-right">
+                  <div class="span-container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <input type="radio" name="heading-text-align" value="right">
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <button type="button" class="submit-btn">Get CSS</button>
+
+      </aside>
+
+    </div>
+
+    <footer>
+      <!--<p>Made by <a href="">@noahcdela</a></p>-->
+      <div class="left-container">
+        <div class="logo-container">
+          <img class="logo" src="images/logo-black.png" alt="">
+        </div>
+        <div class="version">
+          <!--<p>V 1.0</p>-->
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="font-pairing-container">
+          <p class="font-pairing-output"></p>
+        </div>
+        <button type="button" class="reset-btn">Reset Canvas</button>
+      </div>
+    </footer>
+
+    <div class="modal ">
+      <button type="button" class="copy-btn">Copy</button>
+      <pre>
+      <figure>
+          <code>
+<span class="el">.container </span><span>{</span>
+  <span class="sl">background-color</span><span class="b">: </span><span class="el"><span class="bg-hex-color">#006699</span></span><span class="b">;</span>
+<span class="b">}</span>
+
+<span class="el">.heading </span><span>{</span>
+  <span class="sl">font-family</span><span class="b">: </span><span class="el"><span>'</span><span class="heading-font-output">Lato</span><span>'</span></span><span class="b">;</span>
+  <span class="sl">font-weight</span><span class="b">: </span><span class="el"><span class="heading-weight-output">Bold</span></span><span class="b">;</span>
+  <span class="sl">font-size</span><span class="b">: </span><span class="el"><span class="heading-font-size-output">64</span><span>px</span></span><span class="b">;</span>
+  <span class="sl">color</span><span class="b">: </span><span class="el"><span class="header-hex-color">#000000</span></span><span class="b">;</span>
+  <span class="sl">margin-bottom</span><span class="b">: </span><span class="el"><span class="heading-margin-output">0</span><span>px</span></span><span class="b">;</span>
+  <span class="sl">line-spacing</span><span class="b">: </span><span class="el"><span class="heading-kerning-output-px">auto</span></span><span class="b">;</span>
+  <span class="sl">line-height</span><span class="b">: </span><span class="el"><span class="heading-lh-output-px">auto</span></span><span class="b">;</span>
+  <span class="sl">text-align</span><span class="b">: </span><span class="el"><span class="heading-text-align-output">left</span></span><span class="b">;</span>
+  <span class="sl">max-width</span><span class="b">: </span><span class="el"><span class="heading-max-width-output">900</span><span>px</span></span><span class="b">;</span>
+<span class="b">}</span>
+
+<span class="el">.body </span><span>{</span>
+  <span class="sl">font-family</span><span class="b">: </span><span class="el"><span>'</span><span class="body-font-output">Open Sans</span><span>'</span></span><span class="b">;</span>
+  <span class="sl">font-weight</span><span class="b">: </span><span class="el"><span class="body-weight-output">Normal</span></span><span class="b">;</span>
+  <span class="sl">font-size</span><span class="b">: </span><span class="el"><span class="body-font-size-output">18</span><span>px</span></span><span class="b">;</span>
+  <span class="sl">color</span><span class="b">: </span><span class="el"><span class="body-hex-color">#000000</span></span><span class="b">;</span>
+  <span class="sl">margin-top</span><span class="b">: </span><span class="el"><span class="body-margin-output">0</span><span>px</span></span><span class="b">;</span>
+  <span class="sl">line-height</span><span class="b">: </span><span class="el"><span class="body-lh-output-px">auto</span></span><span class="b">;</span>
+  <span class="sl">text-align</span><span class="b">: </span><span class="el"><span class="body-text-align-output">left</span></span><span class="b">;</span>
+  <span class="sl">max-width</span><span class="b">: </span><span class="el"><span class="body-max-width-output">900</span><span>px</span></span><span class="b">;</span>
+<span class="b">}</span>
+          </code>
+      </figure>
+      </pre>
+      <button type="button" class="close-btn">Close</button>
+      <div class="alert-copied">Copied to clipboard! 📎</div>
+    </div>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+    <script src='js/spectrum.js'></script>
+  </body>
+</html>
