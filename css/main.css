@@ -458,9 +458,16 @@ td, th {
 textarea, input, button {
   outline: none; }
 
+html {
+  overflow: hidden; }
+
 body {
   position: relative;
-  overflow: hidden; }
+  width: 100%;
+  height: 100%; }
+
+.body-container {
+  position: relative; }
 
 .input-container {
   position: relative;
@@ -788,13 +795,13 @@ button, .btn {
   height: 100vh;
   width: 270px;
   right: 0;
-  top: 100vw;
+  bottom: -100vh;
   z-index: 10;
   background: #383838;
   color: white;
-  transition: 500ms ease-in-out; }
+  transition: 300ms ease-in-out; }
   .modal.open {
-    top: 0; }
+    bottom: 0; }
 
 .copy-btn {
   position: absolute;
@@ -863,15 +870,20 @@ code {
 .font-pairing-container {
   border-left: 2px solid #F1F1F1;
   height: 100%;
-  width: 500px;
   display: block;
   text-align: center; }
 
+@media (max-width: 1024px) {
+  .font-pairing-container {
+    display: none; } }
+
 .font-pairing-output {
+  width: 100%;
   margin-top: 0px;
   line-height: 0px;
   opacity: 0;
-  transition: 300ms; }
+  transition: 300ms;
+  padding: 0px 20px; }
   .font-pairing-output.show-pairing {
     opacity: 1;
     line-height: 58px; }
@@ -898,7 +910,6 @@ footer {
   position: absolute;
   bottom: 0; }
   footer p {
-    margin-left: 30px;
     height: 58px;
     display: inline;
     line-height: 58px;
@@ -906,6 +917,43 @@ footer {
   footer a {
     color: lightblue;
     text-decoration: none; }
+
+.screen-size-container {
+  position: absolute;
+  z-index: 110;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #069;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 400ms ease; }
+  .screen-size-container .msg-container {
+    max-width: 300px;
+    color: white;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 10px; }
+
+.msg-emoji {
+  font-size: 64px;
+  margin-bottom: 30px;
+  animation: float 1500ms ease-in-out infinite; }
+
+@keyframes float {
+  0% 100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.3); } }
+
+@media (max-width: 768px) {
+  footer {
+    display: none; }
+  .screen-size-container {
+    display: flex; } }
 
 .intro-container {
   position: absolute;
