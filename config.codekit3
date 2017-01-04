@@ -103,6 +103,12 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/images\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/images\/favicon.ico",
+		"oF": 0
+		},
 	"\/images\/logo-black.png": {
 		"ft": 32768,
 		"iS": 3348,
