@@ -406,6 +406,9 @@ code
 .sl
   color: #54bccd
 
+.left-container
+  display: flex
+
 .right-container
   display: flex
   &:last-child
@@ -458,8 +461,8 @@ code
   align-items: center
 
 .version
-  width: 30px
   height: 100%
+  padding-left: 20px
 
 footer
   display: flex
@@ -477,8 +480,8 @@ footer
     line-height: 58px
     color: $dark-gray
   a
-    color: lightblue
-    text-decoration: none
+    color: $dark-gray
+    //text-decoration: none
 
 .screen-size-container
   position: absolute
