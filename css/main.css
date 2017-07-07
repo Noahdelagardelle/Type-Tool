@@ -693,7 +693,8 @@ section {
   align-items: center;
   width: 100%;
   height: 100vh;
-  left: 0; }
+  left: 0;
+  transition: 250ms ease; }
 
 .text-container {
   -webkit-font-smoothing: antialiased;
@@ -706,7 +707,8 @@ section {
   font-weight: bold;
   font-size: 64px;
   outline: none;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  transition: 250ms ease; }
 
 .body {
   font-family: 'Open Sans';
@@ -715,7 +717,8 @@ section {
   line-height: auto;
   outline: none;
   max-width: 900px;
-  max-height: 80vh; }
+  max-height: 80vh;
+  transition: 250ms ease; }
 
 aside {
   flex-shrink: 0;
@@ -986,7 +989,8 @@ footer {
       transform: scale(1); }
   .intro-container p {
     margin-top: 30px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
     color: white;
     font-size: 18px;
     max-width: 500px;

@@ -5,6 +5,7 @@ html
   overflow: hidden
 
 body
+  //font-family: 'Montserrat', sans-serif
   position: relative
   width: 100%
   height: 100%
@@ -40,16 +41,12 @@ input
   box-sizing: border-box
   padding: 10px
   margin-top: 10px
-  //border: 2px solid $gray
 
 input[type=range]
   margin: 0px
 
 input[type=color]
-  //display: none
   height: 40px
-  //padding: 0px 10px 10px 0px
-  //box-shadow: inset 0px 0px 0px 10px white
 
 input .sp-input
   font-size: 14px
@@ -63,7 +60,6 @@ input .sp-input
 
 input[list]
   transition: 300ms
-  //background: blue
   &:focus
     border: 2px solid $black
 
@@ -170,7 +166,6 @@ input[type=radio]
   height: 40px
   box-sizing: border-box
   margin-top: 10px
-  //border: 2px solid blue
   box-sizing: border-box
   display: flex
   justify-content: space-between
@@ -193,7 +188,6 @@ input[type=radio]
   margin: 8px auto
   height: 100%
   width: 50%
-  //border: 2px solid red
   span
     display: block
     margin: 5px 0px
@@ -236,7 +230,6 @@ input[type=radio]
     line-height: 40px
     margin-right: 10px
     color: $dark-gray
-    //padding: 5px
     span:last-child
       margin-left: -3px
 
@@ -248,6 +241,7 @@ section
   width: 100%
   height: 100vh
   left: 0
+  transition: $text-area-transition
 
 .text-container
   -webkit-font-smoothing: antialiased
@@ -261,7 +255,7 @@ section
   font-size: 64px
   outline: none
   margin-bottom: 30px
-  //border: 1px solid teal
+  transition: $text-area-transition
 
 .body
   font-family: 'Open Sans'
@@ -271,7 +265,7 @@ section
   outline: none
   max-width: 900px
   max-height: 80vh
-  //border: 1px solid salmon
+  transition: $text-area-transition
 
 aside
   flex-shrink: 0
@@ -318,7 +312,6 @@ button, .btn
   display: block
 
 .submit-btn
-  //box-shadow: 5px -10px 10px rgba($bg-gray, .9)
   height: 60px
   width: 100%
   line-height: 60px
@@ -370,7 +363,6 @@ button, .btn
   text-transform: uppercase
   padding: 10px
   height: 36px
-  //line-height: 30px
   z-index: 3
   transition: 200ms
   cursor: pointer
@@ -415,10 +407,8 @@ code
     margin-right: 270px
 
 .reset-btn
-  //height: 40px
   width: 200px
   border: none
-  //position: absolute
   bottom: 60px
   right: 0
   cursor: pointer
@@ -433,7 +423,6 @@ code
 .font-pairing-container
   border-left: 2px solid $bg-gray
   height: 100%
-  //width: 500px
   display: block
   text-align: center
 
@@ -472,7 +461,6 @@ footer
   border-top: 2px solid #eee
   background: white
   position: absolute
-  //z-index: 100
   bottom: 0
   p
     height: 58px
@@ -481,7 +469,6 @@ footer
     color: $dark-gray
   a
     color: $dark-gray
-    //text-decoration: none
 
 .screen-size-container
   position: absolute
@@ -549,7 +536,8 @@ footer
       transform: scale(1)
   p
     margin-top: 30px
-    font-family: 'Roboto'
+    font-family: 'Roboto', sans-serif
+    font-weight: lighter
     color: white
     font-size: 18px
     max-width: 500px
